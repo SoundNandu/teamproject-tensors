@@ -6,5 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.cmpe202.pojo.Userprofile;
 @Repository
 public interface IuserprofileRepository extends CrudRepository <Userprofile,String> {
+	Userprofile  findByEmailid(String emailid);
 	
 }

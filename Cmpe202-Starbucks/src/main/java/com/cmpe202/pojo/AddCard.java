@@ -1,5 +1,7 @@
 package com.cmpe202.pojo;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,9 +12,13 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "CardDetails")
-public class AddCard {
+public class AddCard  implements Serializable{
 
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8252899578975938914L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
@@ -27,6 +33,14 @@ public class AddCard {
 	int userid;
 	
 
+	public AddCard(String id, String cardNo, String codeNo, double balance, int userid) {
+		super();
+		this.id = id;
+		this.cardNo = cardNo;
+		this.codeNo = codeNo;
+		this.balance = balance;
+		this.userid = userid;
+	}
 	public AddCard() {
 		super();
 		// TODO Auto-generated constructor stub

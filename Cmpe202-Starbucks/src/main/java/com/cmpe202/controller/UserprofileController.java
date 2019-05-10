@@ -1,4 +1,8 @@
 package com.cmpe202.controller;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -18,7 +22,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.cmpe202.pojo.AddCard;
 import com.cmpe202.pojo.Userprofile;
+import com.cmpe202.repo.IuserprofileRepository;
 import com.cmpe202.service.UserprofileService;
 
 @RestController
@@ -27,66 +33,13 @@ public class UserprofileController {
 
 	@Autowired
 	private UserprofileService userService;
-
 	@Autowired
 	JdbcTemplate jdbcTemplate;
 
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public void login(@RequestBody Userprofile userprofile, Model model, HttpSession session) {
-
-		Userprofile userprofilea = null;
-		List<Userprofile> userprofilelist = null;
-		String emailid = userprofile.getEmailid();
-		String Password = userprofile.getPassword();
-		String DB_EmailId = "";
-		String DB_Password = "";
-		String FirstName = "";
-		String LastName = "";
-		int DB_UserID ;
-
-		String SELECT_SQL = "SELECT * FROM Userprofile where emailid = ?";
-
-		session.setAttribute("isLoggedIn", true);
-		session.setAttribute("email", emailid);
-
-		try {
-			userprofilea = jdbcTemplate.queryForObject(SELECT_SQL, new UserMapper(), emailid);
-			// userprofilea = jdbcTemplate.queryForObject(SELECT_SQL, new UserMapper());
-
-		} catch (DataAccessException data) {
-			data.printStackTrace();
-		}
-
-		if (userprofilea == null) {
-			model.addAttribute("error", true);
-			model.addAttribute("errorMessage", "UserNotAvailable");
-
-		}
-
-		DB_EmailId = userprofilea.getEmailid();
-		DB_Password = userprofilea.getPassword();
-		DB_UserID = userprofilea.getId();
-
-		System.out.println("DB_Email::" + DB_EmailId);
-		System.out.println("DB_Password::" + DB_Password);
-		System.out.println("DB_UserID::" + DB_UserID);
-
-		System.out.println("emailid::" + emailid);
-		System.out.println("Password::" + Password);
-
-		if (DB_EmailId.isEmpty() || DB_EmailId == null) {
-			model.addAttribute("error", true);
-			model.addAttribute("errorMessage", "UserNotAvailable");
-
-		} else if (DB_EmailId.equals(emailid) && DB_Password.equals(Password)) {
-			session.setAttribute("firstName", FirstName);
-			session.setAttribute("userid", DB_UserID);
-			session.setAttribute("lastName", LastName);
-		} else {
-			model.addAttribute("error", true);
-
-		}
-
+	@RequestMapping(value = "/login/{username}/{password}", method = RequestMethod.GET)
+	public List login(@PathVariable String username, @PathVariable String password) {
+		return userService.login(username,password);
+		
 	}
 
 	@RequestMapping(value = "/Getuser", method = RequestMethod.GET)
@@ -100,26 +53,45 @@ public class UserprofileController {
 		return userService.getUsers(id);
 	}
 
-	@RequestMapping(value = "/Postuser", method = RequestMethod.POST)
+	@RequestMapping(value = "/signup", method = RequestMethod.POST)
 	public void addUsers(@RequestBody Userprofile user) {
 		userService.addUsers(user);
 
 	}
 
-	@RequestMapping(value = "/Putuser/{id}", method = RequestMethod.PUT)
-	public void updateUsers(@RequestBody Userprofile user, @PathVariable int id) {
-		userService.updateUsers(id, user);
+	@RequestMapping(value = "/Putuser/{emailid}", method = RequestMethod.PUT)
+	public void updateUsers(@RequestBody Userprofile user, @PathVariable String emailid) {
+		Connection connection = null;
+		try {
+
+			String SELECT_SQL_UPDATE = "UPDATE Userprofile SET firstname = ?, lastname = ?, password=?,phoneno=? WHERE emailid = ? ";
+			connection = jdbcTemplate.getDataSource().getConnection();
+			PreparedStatement preparedstatement = connection.prepareStatement(SELECT_SQL_UPDATE);
+			// set the preparedstatement parameters
+			preparedstatement.setString(1, user.getFirstname());
+			preparedstatement.setString(2, user.getLastname());
+			preparedstatement.setString(3, user.getPassword());
+			preparedstatement.setString(4, user.getPhoneno());
+			preparedstatement.setString(5, user.getEmailid());
+			preparedstatement.executeUpdate();
+			preparedstatement.close();
+		} catch (SQLException se) {
+			// log the exception
+			try {
+				throw se;
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
 	}
+	
+	
 
 	@RequestMapping(value = "/Deleteuser/{id}", method = RequestMethod.DELETE)
 	public void deleteUsers(@PathVariable String id) {
 		userService.deleteUsers(id);
 	}
 	
-	@RequestMapping(value = "/loginout", method = RequestMethod.POST)
-	public void loginOut(@RequestBody Userprofile userprofile, Model model, HttpSession session) {
-
-	}
-	
-
 }

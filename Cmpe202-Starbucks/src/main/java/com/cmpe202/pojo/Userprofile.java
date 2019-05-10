@@ -1,5 +1,7 @@
 package com.cmpe202.pojo;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,12 +11,27 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Userprofile")
-public class Userprofile {
+public class Userprofile implements Serializable {
 
+
+	public Userprofile(String id, String firstname, String lastname, String password, String emailid, String phoneno) {
+		super();
+		this.id = id;
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.password = password;
+		this.emailid = emailid;
+		this.phoneno = phoneno;
+	}
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 76802965758923183L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
-	int id;
+	String id;
 	@Column(name = "firstname")
 	String firstname;
 	@Column(name = "lastname")
@@ -39,11 +56,11 @@ public class Userprofile {
 		// TODO Auto-generated constructor stub
 	}
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -86,6 +103,10 @@ public class Userprofile {
 	public void setPhoneno(String phoneno) {
 		this.phoneno = phoneno;
 	}
+
+	
+
+	
 
 
 

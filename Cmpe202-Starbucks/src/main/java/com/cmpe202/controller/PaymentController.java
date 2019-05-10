@@ -49,7 +49,7 @@ public class PaymentController {
 		paymentDetails.setCardNo(addCard.getCardNo());
 		String SELECT_SQL_SUM =" SELECT SUM(totalamount ) FROM starbucks.OrderDetails where orderid in (select max(orderid) from starbucks.OrderDetails where userid='"+userprofilea.getId()+"') group by totalamount";
 		double result = jdbcTemplate.queryForObject(SELECT_SQL_SUM, double.class);
-		paymentDetails.setUserid(userprofilea.getId());
+		paymentDetails.setUserid(Integer.parseInt(userprofilea.getId()));
 		double balanceToPay=addCard.getBalance()-result;
 		paymentDetails.setAmounttotal(balanceToPay);
 		paymentService.addUsers(paymentDetails);

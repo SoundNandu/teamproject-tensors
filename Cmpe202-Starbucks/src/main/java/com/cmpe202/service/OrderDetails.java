@@ -1,5 +1,6 @@
 package com.cmpe202.service;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -17,7 +18,11 @@ import net.bytebuddy.build.ToStringPlugin.Exclude;
 
 @Entity
 @Table(name = "OrderDetails")
-public class OrderDetails {
+public class OrderDetails implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -639551643351864520L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
@@ -38,9 +43,14 @@ public class OrderDetails {
 	@Column(name = "orderdate")
 	Date orderdate;
 	
+	
 	public ArrayList<itemtest> itemtest1;
 	
 	
+	public OrderDetails() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public int getOrderid() {
 		return orderid;
 	}

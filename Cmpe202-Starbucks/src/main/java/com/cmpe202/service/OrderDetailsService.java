@@ -21,6 +21,15 @@ public class OrderDetailsService {
 		orderDetailsRepository.findAll().forEach(users::add);
 		return users;
 	}
+	
+	
+	public List getAllList() {
+
+		List orderlist = new ArrayList<>();
+		orderDetailsRepository.findAll().forEach(orderlist::add);
+		return orderlist;
+	}
+	
 
 	public OrderDetails getUsers(String firstname) {
 	
@@ -40,5 +49,10 @@ public class OrderDetailsService {
 		orderDetailsRepository.deleteById(id);
 		
 	}
-
+	public Iterable<OrderDetails> list() {
+	        return orderDetailsRepository.findAll();
+	    }
+	
+	
+	
 }

@@ -1,5 +1,8 @@
 package com.cmpe202.controller;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -47,15 +50,31 @@ public class AddCardController {
 		userprofilea = jdbcTemplate.queryForObject(SELECT_SQL, new UserMapper(), emailid);
 		System.out.println("from query ------------  " + userprofilea.getEmailid());
 		System.out.println("---------------IDDD:::" + userprofilea.getId());
-		addcard.setUserid(userprofilea.getId());
+		addcard.setUserid(Integer.parseInt(userprofilea.getId()));
 		addCardService.addUsers(addcard);
 	}
 
 	@RequestMapping(value = "/ReloadCard/{id}", method = RequestMethod.PUT)
-	public void updateUsers(@RequestBody AddCard user, @PathVariable int id) {
-		//update statement
-		
-		addCardService.updateUsers(id, user);
+	public void updateUsers(@RequestBody AddCard add, @PathVariable int id) {
+		Connection connection = null;
+		try {
+			String Update = "UPDATE CardDetails SET balance = ? WHERE id = ? ";
+			connection = jdbcTemplate.getDataSource().getConnection();
+			PreparedStatement preparedstatement = connection.prepareStatement(Update);
+			preparedstatement.setDouble(1, add.getBalance());
+			preparedstatement.setInt(2, id);
+			preparedstatement.executeUpdate();
+			preparedstatement.close();
+		} catch (SQLException se) {
+			// log the exception
+			try {
+				throw se;
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
 	}
 
 	@RequestMapping(value = "/DeleteCard/{id}", method = RequestMethod.DELETE)
