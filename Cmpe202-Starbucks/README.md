@@ -130,6 +130,13 @@ Brought Positive Energy in Team Meeting.
 <img width="1426" alt="Screen Shot 2019-05-10 at 10 32 51 PM" src="https://user-images.githubusercontent.com/41890348/57565912-a4d2e600-737a-11e9-84bf-8887d125ba93.png">
  
  
+ # Deplyment in Docker:
+ <img width="497" alt="Screen Shot 2019-05-10 at 11 25 57 PM" src="https://user-images.githubusercontent.com/41890348/57565937-1ad74d00-737b-11e9-84bf-ecbe2d20f4e6.png">
+<img width="489" alt="Screen Shot 2019-05-10 at 11 25 51 PM" src="https://user-images.githubusercontent.com/41890348/57565938-1b6fe380-737b-11e9-919c-ef4ba1a31aef.png">
+<img width="491" alt="Screen Shot 2019-05-10 at 11 25 45 PM" src="https://user-images.githubusercontent.com/41890348/57565939-1ca11080-737b-11e9-9c82-6ebf44570c24.png">
+<img width="482" alt="Screen Shot 2019-05-10 at 11 25 38 PM" src="https://user-images.githubusercontent.com/41890348/57565942-1f036a80-737b-11e9-9cca-a8433744c96a.png">
+<img width="497" alt="Screen Shot 2019-05-10 at 11 25 32 PM" src="https://user-images.githubusercontent.com/41890348/57565943-20cd2e00-737b-11e9-8b52-cd257a4eba79.png">
+ 
  
 
 
