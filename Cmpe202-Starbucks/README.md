@@ -123,7 +123,11 @@ Presented ideas to implement to the team.
 Always encourage everyone to try new things.
 Brought Positive Energy in Team Meeting.
  
- 
+# TEST CASES FOR ALL THE API's
+<img width="1340" alt="Screen Shot 2019-05-10 at 10 33 32 PM" src="https://user-images.githubusercontent.com/41890348/57565907-9d134180-737a-11e9-8b24-0c86b1566fa0.png">
+<img width="1301" alt="Screen Shot 2019-05-10 at 10 33 23 PM" src="https://user-images.githubusercontent.com/41890348/57565908-a1d7f580-737a-11e9-9a02-aadac9f3258f.png">
+<img width="1436" alt="Screen Shot 2019-05-10 at 10 33 02 PM" src="https://user-images.githubusercontent.com/41890348/57565910-a3a1b900-737a-11e9-9231-ce44f6bf3498.png">
+<img width="1426" alt="Screen Shot 2019-05-10 at 10 32 51 PM" src="https://user-images.githubusercontent.com/41890348/57565912-a4d2e600-737a-11e9-84bf-8887d125ba93.png">
  
  
  
