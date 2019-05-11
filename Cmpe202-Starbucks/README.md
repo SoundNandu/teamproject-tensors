@@ -139,6 +139,7 @@ Brought Positive Energy in Team Meeting.
 
 # BURN CHART
 <img width="934" alt="Screen Shot 2019-05-10 at 11 33 27 PM" src="https://user-images.githubusercontent.com/41890348/57566011-4b6bb680-737c-11e9-83df-cb4691403cb8.png">
+
 # TASK SHEET
 
 <img width="1226" alt="Screen Shot 2019-05-10 at 11 34 38 PM" src="https://user-images.githubusercontent.com/41890348/57566012-4c9ce380-737c-11e9-9bee-4132867d73ee.png">
