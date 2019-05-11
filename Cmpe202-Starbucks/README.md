@@ -20,8 +20,8 @@ We developed the API’s in spring boot which is an open source Java-based frame
 We have used the Amazon Relational Database Service (Amazon RDS) which is a distributed relational database service by Amazon Web Services.
 
 ## Deployment:
-We used Amazon EC2 instance for deploying the API’s.
-We deployed the API’s to AWS in an Auto Scaled EC2 Cluster with Load Balancer as Docker Containers.
+    1.We used Amazon EC2 instance for deploying the API’s.
+    2.We deployed the API’s to AWS in an Auto Scaled EC2 Cluster with Load Balancer as Docker Containers.
 
 ## Methodology:
 Agile- We worked on the Agile Method which is a an approach to project management utilized in software development. This method assisted us in responding to the unpredictability of constructing software. We decided to go with a 1- week sprint methodology.
