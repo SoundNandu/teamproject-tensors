@@ -137,11 +137,13 @@ Brought Positive Energy in Team Meeting.
 <img width="482" alt="Screen Shot 2019-05-10 at 11 25 38 PM" src="https://user-images.githubusercontent.com/41890348/57565942-1f036a80-737b-11e9-9cca-a8433744c96a.png">
 <img width="497" alt="Screen Shot 2019-05-10 at 11 25 32 PM" src="https://user-images.githubusercontent.com/41890348/57565943-20cd2e00-737b-11e9-8b52-cd257a4eba79.png">
 
-# BURN SHEET
+# BURN CHART
+<img width="934" alt="Screen Shot 2019-05-10 at 11 33 27 PM" src="https://user-images.githubusercontent.com/41890348/57566011-4b6bb680-737c-11e9-83df-cb4691403cb8.png">
+# TASK SHEET
 
- 
- 
+<img width="1226" alt="Screen Shot 2019-05-10 at 11 34 38 PM" src="https://user-images.githubusercontent.com/41890348/57566012-4c9ce380-737c-11e9-9bee-4132867d73ee.png">
 
+<img width="876" alt="Screen Shot 2019-05-10 at 11 33 38 PM" src="https://user-images.githubusercontent.com/41890348/57566013-4dce1080-737c-11e9-8fa1-991661197244.png">
 
 
 
