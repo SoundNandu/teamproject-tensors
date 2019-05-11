@@ -1,3 +1,9 @@
+## TEAM TENSOR:
+  #### 1.Sowndhariya
+  #### 2.Lalitha
+  #### 3.RajShree
+  #### 4.Yee
+  
 ## Project Architecture:
 
 The idea of this project is to leverage the individual project implementation and build the following API’s.
@@ -5,6 +11,7 @@ User Profiles API
 Add Card API
 Managed Orders API
 Payments API
+
 
 ## Framework:
 We developed the API’s in spring boot which is an open source Java-based framework mostly used to create micro Services.
