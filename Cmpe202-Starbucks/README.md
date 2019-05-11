@@ -43,12 +43,12 @@ Image: https://www.upgrad.com/blog/15-spring-mvc-interview-questions/?iref=Blog_
 ## Journal Week #1 - 05/04 to 05/10
 
 ## Login API (Rajshree Chauhan)
-What I have done this today
+### What I have done this today
 I started from looking at the architecture of the project.
 Project setup and dependency installation
 Writing JUnit tests for the API.
 Started creating User tables and dependency for adding user details.
-What I plan to do next 5 days
+## What I plan to do next 5 days
 Creating the data classes, interfaces and the controller for the Login API implementation.
 Create methods for checking user authentication.
 Create methods of getting logged in user details, adding, updating and deleting users.
@@ -61,12 +61,12 @@ Communicated with the team about different possibilities of design patterns.
 Initiated a Whatsapp group discussion.
 Set up a zoom meeting to discuss the roadblocks.
 ## Add Card API (Lalitha A)
-What I have done this today
+### What I have done this today
 Started working on the architecture and design pattern.
 Project setup and dependency installation.
 Writing JUnit tests for the Add card API.
 Created database tables for the add card functionality.
-What I plan to do next 5 days
+### What I plan to do next 5 days
 Create the data classes, interfaces and the controller for the Add card API.
 Create methods for adding, updating and deleting cards.
 Unit Test
@@ -78,35 +78,35 @@ Zoom meeting every other day
 Private project group message in WhatsApp and Google hangouts.
 Project integration meetings.
 ## Manage Orders API (Sowndhariya N)
-What I have done this today
+### What I have done this today
 Started working on the architecture and design pattern.
 Project setup and dependency installation.
 Writing JUnit tests for the Manage Orders API.
 Created database tables for the order functionality.
-What I plan to do next 5 days
+### What I plan to do next 5 days
 Create the data classes, interfaces and the controller for the Manage Orders API.
 Create methods for adding new orders.
 Unit Test
 Deployment
 Documentation
-XP Core Value - Communication
+## XP Core Value - Communication
 I have able to facilitate continuous and constant communication throughout week 1. Initiatives I took for communicating.
 Zoom meeting every other day
 Private project group message in WhatsApp and Google hangouts.
 Project integration meetings.
 ## Payment API (Yee Zhian)
-What I have done this today
+### What I have done this today
 Started working on the architecture and design pattern.
 Project setup and dependency installation.
 Writing JUnit tests for the Payments API.
 Created database tables for the payment functionality.
-What I plan to do next 5 days
+### What I plan to do next 5 days
 Create the data classes, interfaces and the controller for the Payment API.
 Create methods for adding, updating and deleting cards.
 Unit Test
 Deployment
 Documentation
-XP Core Value - Courage
+## XP Core Value - Courage
 I have able to facilitate continuous and constant communication throughout week 1. Initiatives I took for communicating.
 Presented ideas to implement to the team.
 Always encourage everyone to try new things.
