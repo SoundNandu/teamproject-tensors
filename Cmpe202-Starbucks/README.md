@@ -28,13 +28,16 @@ Since, we can utilize these API’s for building a web or a mobile application, 
 The model will send the same data irrespective of the device being used, which ensures a complete consistency across all devices.
 
 
+![Screen Shot 2019-05-10 at 7 09 31 PM](https://user-images.githubusercontent.com/43118872/57563800-29ac0880-7357-11e9-8ec5-605b3f5bfaf9.png)
+
+
 
 Image: https://www.upgrad.com/blog/15-spring-mvc-interview-questions/?iref=Blog_Content_MVC_Architecture
 
 
-
-
 ![Screen Shot 2019-05-10 at 6 19 27 PM](https://user-images.githubusercontent.com/43118872/57563777-d6d25100-7356-11e9-8af1-d9b09c252a9e.png)
+
+
 
 
 
