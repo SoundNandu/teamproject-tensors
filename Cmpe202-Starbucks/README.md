@@ -45,6 +45,7 @@ Image: https://www.upgrad.com/blog/15-spring-mvc-interview-questions/?iref=Blog_
 
 ## Journal Week #1 - 05/04 to 05/10
 
+
 ## Login API (Rajshree Chauhan)
 ### What I have done this today
 I started from looking at the architecture of the project.
